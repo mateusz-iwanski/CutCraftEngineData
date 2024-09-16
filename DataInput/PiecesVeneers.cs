@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CutCraftEngineDataInput.DataInput
+namespace CutCraftEngineData.DataInput
 {
     /// <summary>
     /// Specifies which veneers should be used.

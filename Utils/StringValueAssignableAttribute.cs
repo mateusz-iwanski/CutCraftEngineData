@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace CutCraftEngineDataInput.Utils
+namespace CutCraftEngineData.Utils
 {
     /// <summary>
     /// Custom attribute to check string property (only public) values against a predefined list of values.  

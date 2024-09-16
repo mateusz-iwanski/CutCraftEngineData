@@ -1,4 +1,4 @@
-﻿using CutCraftEngineDataInput.Utils;
+﻿using CutCraftEngineData.Utils;
 using Microsoft.SqlServer.Server;
 using Newtonsoft.Json.Linq;
 using System;
@@ -10,7 +10,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CutCraftEngineDataInput.DataInput
+namespace CutCraftEngineData.DataInput
 {
     /// <summary>
     /// The Piece object describes _piece.

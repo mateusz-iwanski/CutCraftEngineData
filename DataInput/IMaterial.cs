@@ -1,5 +1,5 @@
 ﻿
-namespace CutCraftEngineDataInput.DataInput
+namespace CutCraftEngineData.DataInput
 {
     public interface IMaterial : IDataGroupRoot
     {

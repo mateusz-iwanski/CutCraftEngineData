@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CutCraftEngineDataInput.DataInput
+namespace CutCraftEngineData.DataInput
 {
     /// <summary>
     /// Specified default edging for the waste that was qualified as usable.

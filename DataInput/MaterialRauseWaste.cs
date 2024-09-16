@@ -1,11 +1,11 @@
-﻿using CutCraftEngineDataInput.DataInput;
+﻿using CutCraftEngineData.DataInput;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CutCraftEngineDataInput.DataInput
+namespace CutCraftEngineData.DataInput
 {
     /// <summary>
     /// It defines the criterion for qualifying waste as usable.

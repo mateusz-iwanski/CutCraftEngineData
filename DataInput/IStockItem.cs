@@ -1,4 +1,4 @@
-﻿namespace CutCraftEngineDataInput.DataInput
+﻿namespace CutCraftEngineData.DataInput
 {
     public interface IStockItem : IDataGroupRoot
     {

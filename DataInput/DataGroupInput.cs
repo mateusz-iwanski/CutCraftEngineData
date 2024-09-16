@@ -1,4 +1,4 @@
-﻿using CutCraftEngineDataInput.Utils;
+﻿using CutCraftEngineData.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CutCraftEngineDataInput.DataInput
+namespace CutCraftEngineData.DataInput
 {
     public abstract class DataGroupInput
     {

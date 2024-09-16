@@ -1,4 +1,4 @@
-﻿using CutCraftEngineDataInput.Utils;
+﻿using CutCraftEngineData.Utils;
 using Microsoft.SqlServer.Server;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CutCraftEngineDataInput.DataInput
+namespace CutCraftEngineData.DataInput
 {
     /// <summary>
     /// List of StockItem objects.

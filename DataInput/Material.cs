@@ -1,11 +1,11 @@
-﻿using CutCraftEngineDataInput.Utils;
+﻿using CutCraftEngineData.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CutCraftEngineDataInput.DataInput
+namespace CutCraftEngineData.DataInput
 {
     /// <summary>
     /// Material object for defining material group.
