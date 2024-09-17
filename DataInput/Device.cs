@@ -136,9 +136,11 @@ namespace CutCraftEngineData.DataInput
         public MaxCutLengthByWidth maxCutLengthByWidth { get; }
 
         /// <summary>
-        /// Defines the maximum number of stocks that can be cut at once from one layout.
-        /// Works only for CutGLib
+        /// Defines the maximum number of stocks that can be cut at once from one layout.        
         /// </summary>
+        /// <remarks>
+        /// Works only with CutGLib
+        /// </remarks>
         public int MaxLayoutSize { get; }
 
         /// <summary>
