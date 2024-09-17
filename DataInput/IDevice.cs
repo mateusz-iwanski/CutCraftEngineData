@@ -16,5 +16,6 @@
         Slants slants { get; }
         bool stripCuts { get; }
         string title { get; }
+        public int MaxLayoutSize { get; }
     }
 }
