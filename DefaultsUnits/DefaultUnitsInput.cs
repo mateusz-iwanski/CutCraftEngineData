@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CutCraftEngineData..configuration
+namespace CutCraftEngineData.Configuration
 {
     public class DefaultUnitsInput : DefaultUnits, IDataGroupRoot
     {
