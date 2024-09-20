@@ -58,7 +58,7 @@ namespace CutCraftEngineData.Configuration
 
             Advanced advanced = new Advanced(
                 new DynamicMethodSwitch(enabled: true, threshold: "1s"), 
-                new FastMethodForLastStockItems(enabled: true, threshold: 0.8d), 
+                new FastMethodForLastStockItems(enabled: true, threshold: "0.80%"), 
                 new SearchPrecision(firstLevel: 2147483647, nextLevels: 1),
                 searchDirectionOfStockItem: "auto");
 
@@ -126,7 +126,7 @@ namespace CutCraftEngineData.Configuration
 
             Advanced advanced = new Advanced(
                 new DynamicMethodSwitch(enabled: true, threshold: "1s"),
-                new FastMethodForLastStockItems(enabled: true, threshold: 0.8d),
+                new FastMethodForLastStockItems(enabled: true, threshold: "0.80%"),
                 new SearchPrecision(firstLevel: 2147483647, nextLevels: 1), //2147483647
                 searchDirectionOfStockItem: "auto");
 
