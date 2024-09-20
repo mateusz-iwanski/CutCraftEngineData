@@ -24,14 +24,14 @@ namespace CutCraftEngineData.Configuration
         /// If total size of all available pieces is smaller than the value provided here, then fast method will be activated.
         /// Value in percent.
         /// </summary>
-        public double threshold { get; set; }
+        public string threshold { get; set; }
 
         /// <summary>
         /// Constructor for FastMethodForLastStockItems class.
         /// </summary>
         /// <param name="enabled">Enables or disables the fastMethodForLastStockItems.</param>
-        /// <param name="threshold">If total size of all available pieces is smaller than the value provided here, then fast method will be activated. Value express in percent</param>
-        public FastMethodForLastStockItems(bool enabled, double threshold)
+        /// <param name="threshold">If total size of all available pieces is smaller than the value provided here, then fast method will be activated. Value express in percent ("10%")</param>
+        public FastMethodForLastStockItems(bool enabled, string threshold)
         {
             this.enabled = enabled;
             this.threshold = threshold;
