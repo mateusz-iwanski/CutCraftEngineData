@@ -44,6 +44,12 @@ namespace CutCraftEngineData.DataInput
         [StringValueAssignable("deg", "rad")]
         public string angle { get; set; }
 
+        /// <summary>
+        /// Parameterless constructor to avoid using a logical 
+        /// constructor during deserialization
+        /// </summary>
+        public DefaultUnits() { }
+
         public DefaultUnits(string _length, string _field, string _angle)
         {
             length = _length;
