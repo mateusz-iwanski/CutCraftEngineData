@@ -57,25 +57,25 @@ namespace CutCraftEngineData.DataInput
         /// <returns>True if all property values match the allowed values, otherwise false.</returns>
         public bool StringValueCheckAttribute<T>(T _object)
         {
-            // Get all properties of the specified object
-            PropertyInfo[] props = typeof(T).GetProperties();
+            //// Get all properties of the specified object
+            //PropertyInfo[] props = typeof(T).GetProperties();
 
-            // Iterate through each property and check for StringValueAssignableAttribute
-            foreach (PropertyInfo prop in props)
-            {
-                // Get the StringValueAssignableAttribute for the property
-                var attrs = prop.GetCustomAttribute(typeof(StringValueAssignableAttribute), true) as StringValueAssignableAttribute;
-                if (attrs != null)
-                {
-                    // Check if the property value is in the allowed values
-                    if (!attrs.Values().Any(x => x == prop.GetValue(_object).ToString()))
-                    {
-                        // Throw an ArgumentException if the property value is not in the allowed values
-                        throw new ArgumentException($"Property {_object.GetType().ToString()}.{prop.Name} is set to \"{prop.GetValue(_object).ToString()}\" " +
-                            $"but must be set to one of [\"{string.Join("\" | \"", attrs.Values())}\"]");
-                    }
-                }
-            }
+            //// Iterate through each property and check for StringValueAssignableAttribute
+            //foreach (PropertyInfo prop in props)
+            //{
+            //    // Get the StringValueAssignableAttribute for the property
+            //    var attrs = prop.GetCustomAttribute(typeof(StringValueAssignableAttribute), true) as StringValueAssignableAttribute;
+            //    if (attrs != null)
+            //    {
+            //        // Check if the property value is in the allowed values
+            //        if (!attrs.Values().Any(x => x == prop.GetValue(_object).ToString()))
+            //        {
+            //            // Throw an ArgumentException if the property value is not in the allowed values
+            //            throw new ArgumentException($"Property {_object.GetType().ToString()}.{prop.Name} is set to \"{prop.GetValue(_object).ToString()}\" " +
+            //                $"but must be set to one of [\"{string.Join("\" | \"", attrs.Values())}\"]");
+            //        }
+            //    }
+            //}
 
             return true;
         }
@@ -127,7 +127,7 @@ namespace CutCraftEngineData.DataInput
         /// <param name="stockItem">List od StockItem</param>
         /// <returns></returns>
         /// <exception cref="ArgumentException"></exception>
-        public bool CheckMaterialCompatible(List<IPiece> pieces, List<IStockItem> stockItems)
+        public bool CheckMaterialCompatible(List<Piece> pieces, List<StockItem> stockItems)
         {
             List<Piece> piece = pieces.Cast<Piece>().ToList();
             List<StockItem> stockItem = stockItems.Cast<StockItem>().ToList();
@@ -150,7 +150,7 @@ namespace CutCraftEngineData.DataInput
             return true;
         }
 
-        public bool CheckDeviceCompatible(List<IDevice> device, List<IMaterial> material)
+        public bool CheckDeviceCompatible(List<Device> device, List<Material> material)
         {
             List<Device> devices = device.Cast<Device>().ToList();
             List<Material> materials = material.Cast<Material>().ToList();
