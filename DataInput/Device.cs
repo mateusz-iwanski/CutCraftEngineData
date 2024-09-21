@@ -12,12 +12,17 @@ namespace CutCraftEngineData.DataInput
         /// <summary>
         /// Unique device id.
         /// </summary>
-        public int id { get; }
+        public int id { get; set; } 
 
         /// <summary>
         /// Device title.
         /// </summary>
-        public string title { get; }
+        public string title { get; set; }
+
+        /// <summary>
+        /// Driver of the device that will process the material
+        /// </summary>
+        public string? driver { get; set; } 
 
         /// <summary>
         /// Specifies the material kind this device is made for.
@@ -29,25 +34,25 @@ namespace CutCraftEngineData.DataInput
         /// </summary>
         // TODO: 1d, 2d can't be enum - first letter can be number
         [StringValueAssignable("1d", "2d")]
-        public string materialKind { get; }
+        public string materialKind { get; set; } 
 
         /// <summary>
         /// Specifies support for miter cuts in 1D materials.
         /// 1D only
         /// </summary>
-        public Slants slants { get; }
+        public Slants slants { get; set; } 
 
         /// <summary>
         /// Set it to true if the device allows the cuts to cross each other.
         /// 2D only
         /// </summary>
-        public bool canCrossCuts { get; }
+        public bool canCrossCuts { get; set; } 
 
         /// <summary>
         /// Set it to true if only full cuts (from edge to edge) are allowed.
         /// 2D only.
         /// </summary>
-        public bool fullCutsOnly { get; }
+        public bool fullCutsOnly { get; set; } 
 
         /// <summary>
         /// Set it to true if the device cuts in strips (e.g. for panel saw). 
@@ -56,7 +61,7 @@ namespace CutCraftEngineData.DataInput
         /// Otherwise, the program will not know what the size limit of the strip is. 
         /// This can lead to a situation where a strip with the width of the entire sheet is generated.
         /// </summary>
-        public bool stripCuts { get; }
+        public bool stripCuts { get; set; } 
 
         /// <summary>
         /// The minimum distance between two cuts.
@@ -65,7 +70,7 @@ namespace CutCraftEngineData.DataInput
         /// because then breaking off can be significantly more difficult.
         /// Please note that this is not a kerf that can be set in the material group settings.
         /// </summary>
-        public int minCutWidth { get; }
+        public int minCutWidth { get; set; } 
 
         /// <summary>
         /// Edging method.
@@ -82,7 +87,7 @@ namespace CutCraftEngineData.DataInput
         // TODO: jesli nie... to zalezy czy optymalizator ustawi plyte po dlugosci lub szerokosci przy pierwszym cieciu, czesto sie zdarza, ze optymalniej bedzie zaczac ciac plyte po szerokosci
         // a nie dlugosci ... i co wtedy? Dla ciec gilotynowych optimal nie jest optymalne, wydluza sie czas ciecia, wiecej ruchow pily po calej dlugosci stolu.
         [StringValueAssignable("optimal", "horizontalFirst", "verticalFirst")]
-        public string edgingCuts { get; }
+        public string edgingCuts { get; set; } 
 
         /// <summary>
         /// Edging method for the top and left edges.
@@ -94,7 +99,7 @@ namespace CutCraftEngineData.DataInput
         ///          The Top and left edges will be cut off as full cuts(from edge to edge)
         /// </summary>
         [StringValueAssignable("default", "twoFullCuts")]
-        public string originEdgingCuts { get; }
+        public string originEdgingCuts { get; set; } 
 
         /// <summary>
         /// Specifies whether the first cut will be done horizontally or vertically.
@@ -109,7 +114,7 @@ namespace CutCraftEngineData.DataInput
         ///         The Algorithm will decide.
         /// </summary>
         [StringValueAssignable("horizontal", "vertical", "any")]
-        public string firstCutDirection { get; }
+        public string firstCutDirection { get; set; } 
 
         /// <summary>
         /// Specifies maximum cut depth level the device is supporting.
@@ -124,7 +129,7 @@ namespace CutCraftEngineData.DataInput
         /// This option is especially useful when the device is a guillotine.
         /// </summary>
         // TODO: what's that mean? I don't understand it, when can i use it and for what?
-        public MaxCutLengthByLength maxCutLengthByLength { get; }
+        public MaxCutLengthByLength maxCutLengthByLength { get; set; } 
 
 
         /// <summary>
@@ -133,7 +138,7 @@ namespace CutCraftEngineData.DataInput
         /// This option is especially useful when the device is a guillotine.
         /// </summary>
         // TODO: what's that mean? I don't understand it, when can i use it and for what?
-        public MaxCutLengthByWidth maxCutLengthByWidth { get; }
+        public MaxCutLengthByWidth maxCutLengthByWidth { get; set; } 
 
         /// <summary>
         /// Defines the maximum number of stocks that can be cut at once from one layout.        
@@ -141,7 +146,7 @@ namespace CutCraftEngineData.DataInput
         /// <remarks>
         /// Works only with CutGLib
         /// </remarks>
-        public int MaxLayoutSize { get; }
+        public int MaxLayoutSize { get; set; } 
 
         /// <summary>
         /// Constructor for the Device class.
