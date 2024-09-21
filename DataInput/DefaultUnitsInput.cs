@@ -18,7 +18,7 @@ namespace CutCraftEngineData.DataInput
         /// The default time unit is "s".
         /// </summary>
         [StringValueAssignable("s", "m", "h", "d")]
-        public string time { get; }
+        public string time { get; set; } 
 
         /// <summary>
         /// In C#, when specifying a percentage value, whether as 50 or "50%", it will always be treated as 50%. 
@@ -26,7 +26,13 @@ namespace CutCraftEngineData.DataInput
         /// The percent unit can only take one value: "%", which is also the default.
         /// </summary>
         [StringValueAssignable("%")]
-        public string percent { get; }
+        public string percent { get; set; }
+
+        /// <summary>
+        /// Parameterless constructor to avoid using a logical 
+        /// constructor during deserialization
+        /// </summary>
+        public DefaultUnitsInput() { }
 
         public DefaultUnitsInput(string _time, string _length, string _field, string _angle)
                 : base(_length, _field, _angle)
