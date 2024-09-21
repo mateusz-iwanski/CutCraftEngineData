@@ -16,14 +16,14 @@ namespace CutCraftEngineData.DataInput
         /// <summary>
         /// The minimum size of the longer dimension that qualifies the waste as usable.
         /// </summary>
-        public int minLongerLength { get; }
+        public int minLongerLength { get; set; } 
 
         /// <summary>
         /// The minimum size of the shorter dimension that qualifies the waste as usable. (2D only)
         /// </summary>
-        public int minShorterLength { get; }
+        public int minShorterLength { get; set; } 
 
-        public MaterialWasteEdging edging { get; }
+        public MaterialWasteEdging edging { get; set; } 
 
         /// <summary>
         /// Constructor for ReuseWaste class.

@@ -18,31 +18,31 @@ namespace CutCraftEngineData.DataInput
         /// Unique id of the veneer.
         /// Mandatory
         /// </summary>
-        public int id { get; }
+        public int id { get; set; } 
 
         /// <summary>
         /// Title of the veneer.
         /// Mandatory
         /// </summary>
-        public string title { get; }
+        public string title { get; set; } 
 
         /// <summary>
         /// width of the veneer.
         /// Mandatory
         /// </summary>
-        public int width { get; }
+        public int width { get; set; } 
 
         /// <summary>
         /// Thickness of the veneer.
         /// Mandatory
         /// </summary>
-        public double thickness { get; }
+        public double thickness { get; set; } 
 
         /// <summary>
         /// The maximum thickness of the material for which this veneer can be used.
         /// Mandatory
         /// </summary>
-        public double maxMaterialThickness { get; }
+        public double maxMaterialThickness { get; set; } 
 
         /// <summary>
         /// Creates a new Veneer object.

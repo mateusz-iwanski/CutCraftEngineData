@@ -17,17 +17,17 @@ namespace CutCraftEngineData.DataInput
         /// <summary>
         /// Unique id of a material group. (mandatory)
         /// </summary>
-        public int id { get; }
+        public int id { get; set; } 
 
         /// <summary>
         /// Id of a cutting device used to cut this material group. (mandatory)
         /// </summary>
-        public int deviceId { get; }
+        public int deviceId { get; set; } 
 
         /// <summary>
         /// Title of the material group. (mandatory)
         /// </summary>
-        public string title { get; }
+        public string title { get; set; } 
 
         /// <summary>
         /// Specifies the type of the material. (mandatory)
@@ -38,33 +38,33 @@ namespace CutCraftEngineData.DataInput
         ///         2D materials like glass, panels, fabric, aluminum, cardboard, etc.
         /// </summary>
         [StringValueAssignable("1d", "2d")]
-        public string kind { get; }
+        public string kind { get; set; } 
 
         /// <summary>
         /// Specifies the width of the material. (mandatory, 1D only)
         /// </summary>
-        public int width { get; }
+        public int width { get; set; } 
 
         /// <summary>
         /// Specifies the thickness of the material. (mandatory)
         /// </summary>
-        public int thickness { get; }
+        public int thickness { get; set; } 
 
         /// <summary>
         /// Specifies whether the material group can have a structure. (2D only)
         /// </summary>
-        public bool canHaveStructure { get; }
+        public bool canHaveStructure { get; set; } 
 
         /// <summary>
         /// Specifies whether the pieces of this material group can be rotated. (1D only?)
         /// </summary>
         // TODO: in documentation it is 1D only, is it?
-        public bool canRotate { get; }
+        public bool canRotate { get; set; } 
 
         /// <summary>
         /// Specifies whether the pieces of this material group can be reversed (back to front). (1D only)
         /// </summary>
-        public bool canMirror { get; }
+        public bool canMirror { get; set; } 
 
         /// <summary>
         /// This setting defines the default surplus for pieces, meaning the amount by which each cut element will be enlarged on all sides. 
@@ -72,31 +72,31 @@ namespace CutCraftEngineData.DataInput
         /// is 300x200 and the surplus is set to 2, the optimizer will use a size of 304x204. 
         /// In the case of 1D materials, this applies, of course, only to the length.
         /// </summary>
-        public int surplus { get; }
+        public int surplus { get; set; } 
 
         /// <summary>
         /// This setting determines whether the surplus can be adjusted in the _piece configuration. 
         /// If set to false, any surplus specified by the _piece will be disregarded and the one defined in material group will be used.
         /// </summary>
-        public bool surplusEditable { get; }
+        public bool surplusEditable { get; set; } 
 
         /// <summary>
         /// This setting determines the default Margin for pieces, which is the amount by which each cut element will be reduced on all sides. 
         /// For instance, if a _piece is 300x200 and the Margin is set to 2, the optimizer will use 296x196. 
         /// In the case of 1D materials, this applies, of course, only to the length.
         /// </summary>
-        public int margin { get; }
+        public int margin { get; set; } 
 
         /// <summary>
         /// This setting determines whether the Margin can be adjusted in the _piece configuration. 
         /// If set to false, any Margin specified by the _piece will be disregarded and the one defined in material group will be used.
         /// </summary>
-        public bool marginEditable { get; }
+        public bool marginEditable { get; set; } 
 
         /// <summary>
         /// Specifies default edging for new stock items.
         /// </summary>
-        public int defaultEdging { get; }
+        public int defaultEdging { get; set; } 
 
         /// <summary>
         /// Piece size used for cutting. (mandatory, 2D only)
@@ -108,38 +108,38 @@ namespace CutCraftEngineData.DataInput
         ///         The size of the _piece will be increased by the thickness of the veneers used.
         /// </summary>
         [StringValueAssignable("net", "gross")]
-        public string cuttingDimensions { get; }
+        public string cuttingDimensions { get; set; } 
 
         /// <summary>
         /// Specifies whether pieces of the material group can be veneered. (2D only)
         /// </summary>
-        public bool canBeVeneered { get; }
+        public bool canBeVeneered { get; set; } 
 
         /// TODO: It's in examples but not in documentation
-        private bool grindable { get; }
+        private bool grindable { get; set; } 
 
         /// <summary>
         /// Specifies the size of the kerf, i.e. the width of the waste line left by the cutting device.
         /// </summary>
         // TODO : can be double? Yes It can
-        public double kerf { get; }
+        public double kerf { get; set; } 
 
         /// <summary>
         /// Specifies whether it is possible to do something that we call the "edge cutting". 
         /// If you have 2mm to cut off and the kerf is 3mm, then you kind of have to "take off" those 2mm with just the saw blade - that's edge cutting.
         /// It is ignored if minCutWidth property of used cutting device is greater than zero.
         /// </summary>
-        public bool allowEdgeCuts { get; }
+        public bool allowEdgeCuts { get; set; } 
 
         /// <summary>
         /// It defines the criterion for qualifying waste as usable. usable waste is one that goes to the warehouse for later use.
         /// </summary>
-        public ReuseWaste rauseWaste { get; }
+        public ReuseWaste rauseWaste { get; set; } 
 
         /// <summary>
         /// The list of standardStockItems for the material group.
         /// </summary>
-        public List<StandardStockItem> standardStockItems { get; }
+        public List<StandardStockItem> standardStockItems { get; set; } 
 
         // TODO: check what is this, it's in examples but not in documentation
         //"standardSheet": [],

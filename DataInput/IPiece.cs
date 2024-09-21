@@ -2,19 +2,19 @@
 {
     public interface IPiece : IDataGroupRoot
     {
-        string description { get; }
-        int id { get; }
-        string identifier { get; }
-        int length { get; }
-        int margin { get; }
-        int materialId { get; }
-        string priority { get; }
-        int quantity { get; }
-        string shapeType { get; }
-        string structure { get; }
-        int surplus { get; }
+        string description { get; set; } 
+        int id { get; set; } 
+        string identifier { get; set; } 
+        int length { get; set; } 
+        int margin { get; set; } 
+        int materialId { get; set; } 
+        string priority { get; set; } 
+        int quantity { get; set; } 
+        string shapeType { get; set; } 
+        string structure { get; set; } 
+        int surplus { get; set; } 
         Veneers veneers { get; set; }
-        int width { get; }
+        int width { get; set; } 
 
         dynamic SizeReal();
     }

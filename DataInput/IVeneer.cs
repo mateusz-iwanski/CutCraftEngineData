@@ -2,10 +2,10 @@
 {
     public interface IVeneer : IDataGroupRoot
     {
-        int id { get; }
-        double maxMaterialThickness { get; }
-        double thickness { get; }
-        string title { get; }
-        int width { get; }
+        int id { get; set; } 
+        double maxMaterialThickness { get; set; } 
+        double thickness { get; set; } 
+        string title { get; set; } 
+        int width { get; set; } 
     }
 }

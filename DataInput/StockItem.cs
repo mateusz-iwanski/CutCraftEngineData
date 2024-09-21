@@ -19,23 +19,23 @@ namespace CutCraftEngineData.DataInput
         /// Unique StockItem id.
         /// Mandatory
         /// </summary>
-        public int id { get; }
+        public int id { get; set; } 
 
         /// <summary>
         /// The ID of the material group the StockItem is made from.
         /// Mandatory
         /// </summary>
-        public int materialId { get; }
+        public int materialId { get; set; } 
 
         /// <summary>
         /// The user defined identifier of the StockItem. It must be Code128 barcode compatible.
         /// </summary>
-        public string identifier { get; }
+        public string identifier { get; set; } 
 
         /// <summary>
         /// Description of the StockItem.
         /// </summary>
-        public string description { get; }
+        public string description { get; set; } 
 
         /// <summary>
         /// Priority of the StockItem.
@@ -46,25 +46,25 @@ namespace CutCraftEngineData.DataInput
         ///         The stock is handled with lower priority – the program will try to avoid it.
         /// </summary>
         [StringValueAssignable("normal", "low")]
-        public string priority { get; }
+        public string priority { get; set; } 
 
         /// <summary>
         /// length of the StockItem.
         /// Mandatory
         /// </summary>
-        public double length { get; }
+        public double length { get; set; } 
 
         /// <summary>
         /// width of the StockItem.
         /// Mandatory. 2D Only
         /// </summary>
-        public double width { get; }
+        public double width { get; set; } 
 
         /// <summary>
         /// Specifies quantity of the stock items.
         /// Mandatory
         /// </summary>
-        public int quantity { get; }
+        public int quantity { get; set; } 
 
         /// <summary>
         /// Specifies the structure of the StockItem.
@@ -77,15 +77,15 @@ namespace CutCraftEngineData.DataInput
         ///         The structure is vertical(along the width).
         /// </summary>
         [StringValueAssignable("none", "byLength", "byWidth")]
-        public string structure { get; }
+        public string structure { get; set; } 
 
         /// <summary>
         /// Edging configuration.
         /// Edging has to be reduced by kerf. If edging suppose left is set to 10, optimalization set 10 + kerf, it is not optimal.
         /// </summary>
-        public Edging edging { get; }
+        public Edging edging { get; set; } 
 
-        private double kerfSize { get; }
+        private double kerfSize { get; set; } 
 
         /// <summary>
         /// Constructor for the StockItem class.

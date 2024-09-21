@@ -15,22 +15,22 @@ namespace CutCraftEngineData.DataInput
         /// <summary>
         /// ID of the veneer to be used on the left edge.
         /// </summary>
-        public int? leftVeneerId { get; }
+        public int? leftVeneerId { get; set; } 
 
         /// <summary>
         /// ID of the veneer to be used on the right edge.
         /// </summary>
-        public int? rightVeneerId { get; }
+        public int? rightVeneerId { get; set; } 
 
         /// <summary>
         /// ID of the veneer to be used on the top edge.
         /// </summary>
-        public int? topVeneerId { get; }
+        public int? topVeneerId { get; set; } 
 
         /// <summary>
         /// ID of the veneer to be used on the bottom edge.
         /// </summary>
-        public int? bottomVeneerId { get; }
+        public int? bottomVeneerId { get; set; } 
 
         /// <summary>
         /// Constructor for Veneers class. 2D Only

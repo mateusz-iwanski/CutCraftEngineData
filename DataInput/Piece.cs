@@ -20,32 +20,32 @@ namespace CutCraftEngineData.DataInput
         /// <summary>
         /// Unique _piece id.
         /// </summary>
-        public int id { get; }
+        public int id { get; set; } 
 
         /// <summary>
         /// The ID of the material group from which this _piece will be cut.
         /// </summary>
-        public int materialId { get; }
+        public int materialId { get; set; } 
 
         /// <summary>
         /// The user defined identifier of the _piece. It must be Code128 barcode compatible.
         /// </summary>
-        public string identifier { get; }
+        public string identifier { get; set; } 
 
         /// <summary>
         /// Description of the _piece.
         /// </summary>
-        public string description { get; }
+        public string description { get; set; } 
 
         /// <summary>
         /// The net length of the _piece. For 1D shapes, it is always the total length, including slants.
         /// </summary>
-        public int length { get; }
+        public int length { get; set; } 
 
         /// <summary>
         /// The net width of the _piece.
         /// </summary>
-        public int width { get; }
+        public int width { get; set; } 
 
         /// <summary>
         /// Type of the shape of the _piece. Allowed values: none, rectangle, linear. 
@@ -58,18 +58,18 @@ namespace CutCraftEngineData.DataInput
         ///         Linear 1D shape with slants.The shape property contains slant values.
         /// </summary>
         [StringValueAssignable("none", "rectangle", "linear")]
-        public string shapeType { get; }
+        public string shapeType { get; set; } 
 
         /// <summary>
         /// Depending on shapeType it may contain different Format.
         /// Not using in 2D
         /// </summary>
-        /// public string shape { get; }
+        /// public string shape { get; set; } 
 
         /// <summary>
         /// Specifies quantity of pieces.
         /// </summary>
-        public int quantity { get; }
+        public int quantity { get; set; } 
 
         /// <summary>
         /// Specifies acceptable structures of the _piece. Allowed values: none, byLength, byWidth.
@@ -87,7 +87,7 @@ namespace CutCraftEngineData.DataInput
         // TODO: any - check this value, it is not in documentation is in examples, is not working. Probably is should work as/for  “none,byLength,byWidth"
         /// </summary>
         [StringValueAssignable("none", "byLength", "byWidth", "none,byLength,byWidth")]
-        public string structure { get; }
+        public string structure { get; set; } 
 
         /// <summary>
         /// Priority of the _piece. Allowed values: normal, high, critical.
@@ -100,7 +100,7 @@ namespace CutCraftEngineData.DataInput
         ///         The _piece has 10x higher value than normal ones.
         /// </summary>
         [StringValueAssignable("normal", "high", "critical")]
-        public string priority { get; }
+        public string priority { get; set; } 
 
 
         /// <summary>
@@ -108,14 +108,14 @@ namespace CutCraftEngineData.DataInput
         /// For instance, if a _piece is 300x200 and the surplus is set to 2, the optimizer will use a size of 304x204.
         /// In the case of 1D materials, this applies, of course, only to the length.
         /// </summary>
-        public int surplus { get; }
+        public int surplus { get; set; } 
 
         /// <summary>
         /// Specifies the Margin, which is the amount by which the _piece size will be reduced on all sides.
         /// For instance, if a _piece is 300x200 and the Margin is set to 2, the optimizer will use 296x196.
         /// In the case of 1D materials, this applies, of course, only to the length.
         /// </summary>
-        public int margin { get; }
+        public int margin { get; set; } 
 
         /// <summary>
         /// Specifies which veneers should be used, including leftVeneerId, rightVeneerId, topVeneerId, and bottomVeneerId.

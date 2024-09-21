@@ -15,21 +15,21 @@ namespace CutCraftEngineData.DataInput
         /// <summary>
         /// Set it to true if the device supports miter cuts. Only for 1D.
         /// </summary>
-        public bool supported { get; }
+        public bool supported { get; set; } 
 
         /// <summary>
         /// How the left slant's angle is measured.
         /// Parameters: fromMiddleToLeft, fromMiddleToRight, fromLeft, fromRight
         /// </summary>
         [StringValueAssignable("fromMiddleToLeft", "fromMiddleToRight", "fromLeft", "fromRight")]
-        public string leftMeasurement { get; }
+        public string leftMeasurement { get; set; } 
 
         /// <summary>
         /// How the right slant's angle is measured.
         /// Parameters: fromMiddleToLeft, fromMiddleToRight, fromLeft, fromRight
         /// </summary>
         [StringValueAssignable("fromMiddleToLeft", "fromMiddleToRight", "fromLeft", "fromRight")]
-        public string rightMeasurement { get; }
+        public string rightMeasurement { get; set; } 
 
         /// <summary>
         /// Constructor for Slants class. Only for 1D

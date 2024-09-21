@@ -16,13 +16,13 @@ namespace CutCraftEngineData.DataInput
         /// <summary>
         /// Enables or disables maximum horizontal cut length.
         /// </summary>
-        public bool enabled { get; }
+        public bool enabled { get; set; } 
 
         /// <summary>
         /// Maximum cut length.
         /// </summary>
         // TODO: what is max limit?
-        public double limit { get; }
+        public double limit { get; set; } 
 
         /// <summary>
         /// Constructor for MaxCutLengthByLength class.

@@ -15,14 +15,14 @@ namespace CutCraftEngineData.DataInput
         /// <summary>
         /// Enables or disables setting the edging to the StockItem created from the usable waste.
         /// </summary>
-        public bool enabled { get; }
+        public bool enabled { get; set; } 
 
         /// <summary>
         /// The default edging size. Note that edging will be applied to all edges of the new StockItem.
         /// </summary>
         // TODO: Change to different name, default is the system name, i can't use it now
         [JsonProperty("default")]
-        public int _default { get; }
+        public int _default { get; set; } 
 
         /// <summary>
         /// Constructor for Edging class.
