@@ -34,7 +34,7 @@ namespace CutCraftEngineData.DataInput
         /// Input data group contains input data from the client.
         /// </summary>
         [JsonProperty("input")]
-        public DataInputWrapper InputWrapper { get; init; }
+        public DataInput Input { get; init; }
 
         /// <summary>
         /// The allowOverstock parameter controls the behavior of the cutting optimization algorithm. 
@@ -47,15 +47,11 @@ namespace CutCraftEngineData.DataInput
         /// </summary>
         [JsonProperty("allowOverstock")]
         public bool AllowOverstock { get; init; }
+        
         public Command()
         {
             return;
         }
-    }
-
-    public class DataInputWrapper
-    {
-        public DataInput input { get; set; }
     }
 
 }
