@@ -20,6 +20,12 @@ namespace CutCraftEngineData.DataOutput
         public List<CuttingRest> rest { get; set; }
         public List<Cut> cuts { get; set; }
 
+        /// <summary>
+        /// Parameterless constructor to avoid using a logical 
+        /// constructor during deserialization
+        /// </summary>
+        public Cutting() { }
+
         // TODO: change JToken to JObject, we know what it will be
         public Cutting(JToken jToken)
         {
