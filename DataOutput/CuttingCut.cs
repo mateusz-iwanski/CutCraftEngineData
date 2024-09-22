@@ -34,6 +34,12 @@ namespace CutCraftEngineData.DataOutput
         public double endY { get; set; }
 
         /// <summary>
+        /// Parameterless constructor to avoid using a logical 
+        /// constructor during deserialization
+        /// </summary>
+        public Cut() { }
+
+        /// <summary>
         /// Constructor for Cut class.
         /// </summary>
         /// <param name="startX">Start X position of the cut.</param>
