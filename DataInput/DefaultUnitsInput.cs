@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CutCraftEngineData.DataInput
 {
-    public class DefaultUnitsInput : DefaultUnits, IDataGroupRoot
+    public class DefaultUnitsInput : DefaultUnits.DefaultUnits, IDataGroupRoot
     {
         /// <summary>
         /// The time unit in C# can be specified as "s" for seconds, "m" for minutes, "h" for hours, and "d" for days. 
