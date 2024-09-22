@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CutCraftEngineData.DataInput
+namespace CutCraftEngineData.DefaultUnits
 {
     public class DefaultUnits : DataGroupInput
     {
@@ -56,7 +56,7 @@ namespace CutCraftEngineData.DataInput
             field = _field;
             angle = _angle;
 
-            StringValueCheckAttribute<DefaultUnits>(this);
+            StringValueCheckAttribute(this);
         }
 
         public DefaultUnits(JToken jToken)
@@ -65,7 +65,7 @@ namespace CutCraftEngineData.DataInput
             field = jToken["field"].ToString();
             angle = jToken["angle"].ToString();
 
-            StringValueCheckAttribute<DefaultUnits>(this);
+            StringValueCheckAttribute(this);
         }
     }
 
