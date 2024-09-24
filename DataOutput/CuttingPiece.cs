@@ -38,6 +38,12 @@ namespace CutCraftEngineData.DataOutput
         public bool mirrored { get; set; }
 
         /// <summary>
+        /// Parameterless constructor to avoid using a logical 
+        /// constructor during deserialization
+        /// </summary>
+        public CuttingPiece() { }
+
+        /// <summary>
         /// Constructor for the Piece class.
         /// </summary>
         /// <param name="pieceId">ID of the _piece.</param>
