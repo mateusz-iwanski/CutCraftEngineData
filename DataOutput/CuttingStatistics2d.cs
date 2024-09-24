@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CutCraftEngineData.DataOutput
 {
-    internal class CuttingStatistics2d
+    public class CuttingStatistics2d
     {
         /// <summary>
         /// The total surface area of all used stock items.
@@ -38,6 +38,12 @@ namespace CutCraftEngineData.DataOutput
         /// The total length of all the cuts.
         /// </summary>
         public double cutsLength { get; set; }
+
+        /// <summary>
+        /// Parameterless constructor to avoid using a logical 
+        /// constructor during deserialization
+        /// </summary>
+        public CuttingStatistics2d() { }
 
         /// <summary>
         /// Constructor for the TwoD class.
