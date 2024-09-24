@@ -39,6 +39,12 @@ namespace CutCraftEngineData.DataOutput
         public object shape { get; set; }
 
         /// <summary>
+        /// Parameterless constructor to avoid using a logical 
+        /// constructor during deserialization
+        /// </summary>
+        public CuttingRest() { }
+
+        /// <summary>
         /// Constructor for Waste class.
         /// </summary>
         public CuttingRest(double x, double y, double length, double width, string identifier, bool usable, string shapeType, object shape)
