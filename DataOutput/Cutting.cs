@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,11 +14,36 @@ namespace CutCraftEngineData.DataOutput
     /// </summary>
     public class Cutting
     {
+        /// <summary>
+        /// ID of the StockItem for which this cut is made.
+        /// </summary>
         public int stockItemId { get; set; }
+
+        /// <summary>
+        /// If stack cutting is enabled for the material, it indicates the number of stacks the cutting should be performed for. 
+        /// Otherwise, it indicates the number of times the cutting should be performed.
+        /// The meaning of the quantity property varies depending on whether stack cutting is enabled or disabled.
+        /// </summary>
         public int quantity { get; set; }
+
+        /// <summary>
+        /// Statistics of the entire cutting.
+        /// </summary>
         public CuttingStatistics statistics { get; set; }
+
+        /// <summary>
+        /// A list of all pieces placed on the cutting, including their positions and transformations.
+        /// </summary>
         public List<CuttingPiece> pieces { get; set; }
+
+        /// <summary>
+        /// A list of all Waste items, including their positions and sizes.
+        /// </summary>
         public List<CuttingRest> rest { get; set; }
+
+        /// <summary>
+        /// A list of Cut objects.
+        /// </summary>
         public List<Cut> cuts { get; set; }
 
         /// <summary>
