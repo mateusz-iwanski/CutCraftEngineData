@@ -42,6 +42,13 @@ namespace CutCraftEngineData.DataOutput
         /// </summary>
         public double cutsLength { get; set; }
 
+
+        /// <summary>
+        /// Parameterless constructor to avoid using a logical 
+        /// constructor during deserialization
+        /// </summary>
+        public Statistics2d() { }
+
         /// <summary>
         /// Constructor for the TwoD class.
         /// </summary>
@@ -53,12 +60,12 @@ namespace CutCraftEngineData.DataOutput
         /// <param name="cutsLength">The total length of all the cuts.</param>
         public Statistics2d(double field, double usedField, double wasteField, double unusedField, int cutCount, double cutsLength)
         {
-            field = field;
-            usedField = usedField;
-            wasteField = wasteField;
-            unusedField = unusedField;
-            cutCount = cutCount;
-            cutsLength = cutsLength;
+            this.field = field;
+            this.usedField = usedField;
+            this.wasteField = wasteField;
+            this.unusedField = unusedField;
+            this.cutCount = cutCount;
+            this.cutsLength = cutsLength;
         }
 
         public Statistics2d(JToken jToken)
