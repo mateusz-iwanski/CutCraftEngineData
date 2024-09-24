@@ -43,6 +43,12 @@ namespace CutCraftEngineData.DataOutput
         public double cutsLength { get; set; }
 
         /// <summary>
+        /// Parameterless constructor to avoid using a logical 
+        /// constructor during deserialization
+        /// </summary>
+        public CuttingStatistics1d() { }
+
+        /// <summary>
         /// Constructor for the OneD class.
         /// </summary>
         /// <param name="length">The total length of all used stock items.</param>

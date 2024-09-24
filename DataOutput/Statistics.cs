@@ -15,6 +15,12 @@ namespace CutCraftEngineData.DataOutput
         [JsonProperty("1d")]
         public Statistics1d _1d { get; set; }
 
+        /// <summary>
+        /// Parameterless constructor to avoid using a logical 
+        /// constructor during deserialization
+        /// </summary>
+        public Statistics() { }
+
         public Statistics(JToken jToken)
         {
             _2d = new Statistics2d(jToken["2d"]);
